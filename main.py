@@ -13,7 +13,7 @@ def read_data_from_excel(excel_file, sheet_name):
 # Функция для проверки токенов
 def check_tokens(dataframe, addresses):
     # Создаем словарь для быстрого поиска по адресам
-    token_dict = dataframe.set_index('a')['b'].to_dict()
+    token_dict = dataframe.set_index('Wallet Address')['Amount'].to_dict()
 
     total_tokens = 0
     results = []
@@ -43,7 +43,7 @@ def main():
     results, total_tokens = check_tokens(df, addresses)
 
     # Вывод результатов
-    for address, tokens:
+    for address, tokens in results:
         print(f'{address} : {tokens}')
     print(f'Общее количество токенов: {total_tokens}')
 
