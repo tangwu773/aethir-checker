@@ -47,5 +47,5 @@ def main():
         print(f'{address} : {tokens}')
     print(f'Общее количество токенов: {total_tokens}')
 
-if __name__ == '__main__':
+if __name__ == '__main__':        \\ Запускает функцию
     main()
